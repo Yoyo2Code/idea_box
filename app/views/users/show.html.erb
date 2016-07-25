@@ -1,0 +1,11 @@
+<%= form_for([current_user, @idea]) do |t| %>
+  <%= t.label :title %>
+  <%= t.text_field :title %> </br>
+    </br>
+  <%= t.label :body %>
+  <%= t.text_field :body %> </br>
+    </br>
+  <%= options_from_collection_for_select(Image.all, :id, :url) %> </br>
+    </br>
+  <%= t.submit "Create Idea"%>
+<% end %>
